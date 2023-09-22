@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from "react";
+import React, {useCallback, useState} from "react";
 import styled from "styled-components";
 
 const DropDownContainer = styled.div`
@@ -91,11 +91,6 @@ const DropDown = ({options, defaultValues = null, multiSelect = false, defaultPl
         if(timer) clearTimeout(timer);
         timer = setTimeout(() => {setSearchText(text)} , 1500);
     }
-
-    useEffect(() => {
-        console.log("Sort type has changed");
-    },[sortType])
-
 
     return (
         <DropDownContainer>
